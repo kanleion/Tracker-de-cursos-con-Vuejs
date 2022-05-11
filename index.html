@@ -26,7 +26,7 @@
         </fieldset>
         <div>
             <h3>Lista de Cursos</h3>
-            <p class="red">Aun no has realizado cursos</p>
+            <p class="red" v-if="courses.length === 0">Aun no has realizado cursos</p>
             <div>
                 <ol v-for="(course , i) in courses" v-bind:key="course.name">
                     <!-- Lista de cursos -->

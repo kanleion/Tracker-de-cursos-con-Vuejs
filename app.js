@@ -5,7 +5,7 @@ new Vue({
         return {
             courses: [],
             title: "",
-            time: 0,
+            time: "",
 
         }
     },
@@ -15,8 +15,6 @@ new Vue({
             let sum = 0;
             for (let i = 0; i < this.courses.length; i++) {
                 sum += parseInt(this.courses[i].time);
-                console.log(typeof(sum));
-
             }
             return sum;
         }
