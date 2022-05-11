@@ -26,8 +26,8 @@
         </fieldset>
         <div>
             <h3>Lista de Cursos</h3>
-            <p class="red" v-if="courses.length === 0">Aun no has realizado cursos</p>
-            <div>
+            <p class="red" v-show="!courses.length">Aun no has realizado cursos</p>
+            <div v-show="courses.length">
                 <ol v-for="(course , i) in courses" v-bind:key="course.name">
                     <!-- Lista de cursos -->
                     {{i + 1}} - {{course.name}} - {{course.time}} horas
